@@ -43,6 +43,25 @@ app.get("/profile", (req, res) => {
   res.send("Profile Page");
 });
 
+app.get("/register", (req, res) => {
+    res.render("register");
+});
+
+app.post("/register", async(req, res) => {
+    
+    const {username, email, password} = req.body;
+    
+    const New_user = await userModel.create({
+        username:username,
+        email:email,
+        password:password
+    })
+
+    // res.send("data recieved")
+    res.send(New_user)
+    console.log(req.body);
+})
+
 app.post("/get-form-data", (req, res) => {
     console.log(req.body);
     res.send("data recieved")
