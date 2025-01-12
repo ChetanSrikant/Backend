@@ -67,4 +67,20 @@ app.post("/get-form-data", (req, res) => {
     res.send("data recieved")
 });
 
+app.get("/user-data", (req, res) => {
+    userModel.find().then((users)=>{
+        res.send(users)
+    })
+})
+
+app.get("/update-user", async(req, res) => {
+    await userModel.findOneAndUpdate({username:'chetan'}, {username: 'mr_awesome'})
+    res.send('User updated')
+})
+
+app.get("/delete-user", async(req, res) => {
+    await userModel.findOneAndDelete({username:'mr_awesome'})
+    res.send('User deleted')
+})
+
 app.listen(3000);
