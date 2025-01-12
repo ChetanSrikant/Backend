@@ -1,0 +1,23 @@
+{
+  "name": "men",
+  "version": "1.0.0",
+  "main": "hi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChetanSrikant/Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChetanSrikant/Backend/issues"
+  },
+  "homepage": "https://github.com/ChetanSrikant/Backend#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
